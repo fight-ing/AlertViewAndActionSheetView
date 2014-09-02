@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LFViewController : UIViewController
+@interface LFViewController : UIViewController <UIActionSheetDelegate>
 
 @end

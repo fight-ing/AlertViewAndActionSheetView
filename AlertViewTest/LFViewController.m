@@ -20,11 +20,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
+    
+}
+- (IBAction)showAlertViewClicked:(UIButton *)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"title" message:@"message \n aaaaa" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(60, 60, 40, 50)];
     imageView.backgroundColor = [UIColor redColor];
     [alert addSubview:imageView];
     [alert show];
+}
+- (IBAction)showActionSheetView:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"ActionSheet" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:@"destructive" otherButtonTitles: nil];
+    
+    [actionSheet showInView:self.view];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
